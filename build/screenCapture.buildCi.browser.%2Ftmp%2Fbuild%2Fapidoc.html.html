@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/sindresorhus/del#readme"
-
-    >del (v2.2.2)</a>
+    <a href="https://github.com/sindresorhus/del#readme">del (v2.2.2)</a>
 </h1>
 <h4>Delete files and folders</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.del">module del</a><ol>
 
@@ -144,7 +137,7 @@
 				safeCheck(file);
 			}
 
-			file = path.resolve(opts.cwd || &#x27;&#x27;, file);
+			file = path.resolve(opts.cwd || '', file);
 
 			if (dryRun) {
 				return Promise.resolve(file);
@@ -182,7 +175,7 @@
 			safeCheck(file);
 		}
 
-		file = path.resolve(opts.cwd || &#x27;&#x27;, file);
+		file = path.resolve(opts.cwd || '', file);
 
 		if (!dryRun) {
 			rimraf.sync(file);
@@ -204,7 +197,7 @@
 			safeCheck(file);
 		}
 
-		file = path.resolve(opts.cwd || &#x27;&#x27;, file);
+		file = path.resolve(opts.cwd || '', file);
 
 		if (!dryRun) {
 ...</pre></li>
@@ -253,7 +246,7 @@
 			safeCheck(file);
 		}
 
-		file = path.resolve(opts.cwd || &#x27;&#x27;, file);
+		file = path.resolve(opts.cwd || '', file);
 
 		if (!dryRun) {
 			rimraf.sync(file);
@@ -275,7 +268,7 @@
 			safeCheck(file);
 		}
 
-		file = path.resolve(opts.cwd || &#x27;&#x27;, file);
+		file = path.resolve(opts.cwd || '', file);
 
 		if (!dryRun) {
 ...</pre></li>
@@ -308,3 +301,4 @@
     ]
 </div>
 </div>
+</body></html>
