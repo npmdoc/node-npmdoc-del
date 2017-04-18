@@ -72,41 +72,6 @@
 
         </li>
 
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.del.toString">
-            function <span class="apidocSignatureSpan">del.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.del.sync">module del.sync</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.del.sync.sync">
-            function <span class="apidocSignatureSpan">del.</span>sync
-            <span class="apidocSignatureSpan">(patterns, opts)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.del.toString">module del.toString</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.del.toString.toString">
-            function <span class="apidocSignatureSpan">del.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
     </ol></li>
 
 </ol></div>
@@ -201,95 +166,6 @@
 
 		if (!dryRun) {
 ...</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.del.toString" id="apidoc.element.del.toString">
-        function <span class="apidocSignatureSpan">del.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.del.sync" id="apidoc.module.del.sync">module del.sync</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.del.sync.sync" id="apidoc.element.del.sync.sync">
-        function <span class="apidocSignatureSpan">del.</span>sync
-        <span class="apidocSignatureSpan">(patterns, opts)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">sync = function (patterns, opts) {
-	opts = objectAssign({}, opts);
-
-	var force = opts.force;
-	delete opts.force;
-
-	var dryRun = opts.dryRun;
-	delete opts.dryRun;
-
-	return globby.sync(patterns, opts).map(function (file) {
-		if (!force) {
-			safeCheck(file);
-		}
-
-		file = path.resolve(opts.cwd || '', file);
-
-		if (!dryRun) {
-			rimraf.sync(file);
-		}
-
-		return file;
-	});
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-	var force = opts.force;
-	delete opts.force;
-
-	var dryRun = opts.dryRun;
-	delete opts.dryRun;
-
-	return globby.<span class="apidocCodeKeywordSpan">sync</span>(patterns, opts).map(function (file) {
-		if (!force) {
-			safeCheck(file);
-		}
-
-		file = path.resolve(opts.cwd || '', file);
-
-		if (!dryRun) {
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.del.toString" id="apidoc.module.del.toString">module del.toString</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.del.toString.toString" id="apidoc.element.del.toString.toString">
-        function <span class="apidocSignatureSpan">del.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
